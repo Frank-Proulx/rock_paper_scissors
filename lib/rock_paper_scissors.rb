@@ -1,18 +1,18 @@
-require('generator')
+# require('generator')
 
-# module Generator
-#   def computer
-#     choice = rand(3)
-#     if choice == 0
-#       player2 = "rock"
-#     elsif choice == 1
-#       player2 = "scissors"
-#     else
-#       player2 = "paper"
-#     end
-#     player2
-#   end
-# end
+module Generator
+  def computer
+    choice = rand(3)
+    if choice == 0
+      player2 = "rock"
+    elsif choice == 1
+      player2 = "scissors"
+    else
+      player2 = "paper"
+    end
+    player2
+  end
+end
 
 class RPS
   include Generator
@@ -23,8 +23,12 @@ class RPS
       true
     elsif (player1 == "paper") && (player2 == "rock")
       true
+    elsif (player1 == player2)
+      "tie"
     else
       false
     end
   end
+
+  
 end
