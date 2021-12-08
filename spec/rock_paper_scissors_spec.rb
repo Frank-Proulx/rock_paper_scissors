@@ -16,5 +16,5 @@ describe("RPS#wins?") do
     game = RPS.new()
     expect(game.wins?("paper", "rock")).to(eq(true))
   end
-  
 end
+
